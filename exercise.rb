@@ -3,8 +3,18 @@ class Exercise
   # Assume that "str" is a sequence of words separated by spaces.
   # Return a string in which every word in "str" that exceeds 4 characters is replaced with "marklar".
   # If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".
+
+  # Assume that "str" is a sequence of words separated by spaces.
+  # Return a string in which every word in "str" that exceeds 4 characters is replaced with "marklar".
+  # If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".
   def self.marklar(str)
-    # TODO: Implement this method
+    return str.gsub(/[a-zA-z]{5,}/) do |word|
+	    if word == word.downcase
+		    'marklar'
+	    else
+		    'Marklar'
+	    end
+    	end
   end
 
   # Return the sum of all even numbers in the Fibonacci sequence, up to
